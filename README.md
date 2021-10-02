@@ -8,6 +8,14 @@ Examples graphs taken from Figures 3c & 3d
 
     >>> g,h = house_graphs()
 
+
+Compute vertex mapping based on spectral assignment approach (complexity O(n^3))
+
+    >>> mapping = min_P_la(g,h)
+    >>> mapping
+    [(1, 2), (2, 1), (5, 6), (7, 7), (6, 5), (3, 4), (4, 3), (8, 8)]
+
+
 Compute permutation matrix P based on the two-sided orthogonal Procrustes problem (complexity O(2^n))
 
     >>> P,min = min_P(g,h)
@@ -30,9 +38,3 @@ Compute permutation matrix P based on the two-sided orthogonal Procrustes proble
              0.21082674, -0.01422941,  0.68552182]])
     >>> min
     1.7457077722177437e-14
-
-Compute vertex mapping based on spectral assignment approach (complexity O(n^3))
-
-    >>> mapping = min_P_la(g,h)
-    >>> mapping
-    [(1, 2), (2, 1), (5, 6), (7, 7), (6, 5), (3, 4), (4, 3), (8, 8)]
